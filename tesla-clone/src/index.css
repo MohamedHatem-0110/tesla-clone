@@ -10,6 +10,9 @@ body {
   overflow-x: hidden;
   /* overflow-y: hidden; */
 }
+a {
+  text-decoration: none;
+}
 
 @keyframes animateDown {
   0%,
