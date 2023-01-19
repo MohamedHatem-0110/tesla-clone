@@ -70,7 +70,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
-  background-color: white;
+  /* background-color: white; */
   z-index: 1;
 `;
 const Menu = styled.div`
@@ -106,7 +106,12 @@ const BurgerNav = styled.div`
   top: 0;
   bottom: 0;
   right: 0;
-  background-color: lightgray;
+  background: rgb(150, 150, 150);
+  background: linear-gradient(
+    0deg,
+    rgba(150, 150, 150, 1) 0%,
+    rgba(255, 255, 255, 1) 54%
+  );
   width: 300px;
   z-index: 3;
   list-style: none;
@@ -127,8 +132,10 @@ const BurgerNav = styled.div`
 const CustomClose = styled(CloseIcon)`
   cursor: pointer;
   border-radius: 50%;
+
   &:hover {
-    background-color: white;
+    transition: all 0.5s ease-in-out;
+    rotate: 180deg;
   }
 `;
 const CloseWrapper = styled.div`

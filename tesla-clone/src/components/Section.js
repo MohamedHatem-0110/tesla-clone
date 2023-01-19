@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
+import { handleClickScroll } from "./Home";
+import { useRef } from "react";
 function Section({
+  id,
   title,
   description,
   leftBtnText,
@@ -23,7 +26,10 @@ function Section({
             {rightBtnText && <RightButton>{rightBtnText}</RightButton>}
           </ButtonGroup>
         </Fade>
-        <DownArrow src="/images/down-arrow.svg" />
+        <DownArrow
+          onClick={() => handleClickScroll({ id })}
+          src="/images/down-arrow.svg"
+        />
       </Buttons>
     </Wrap>
   );
@@ -63,8 +69,8 @@ const LeftButton = styled.div`
   opacity: 0.85;
   text-transform: uppercase;
   font-size: 12px;
-  cursor: pointer;
   margin: 8px;
+  cursor: pointer;
 `;
 const RightButton = styled(LeftButton)`
   background-color: white;
@@ -75,6 +81,8 @@ const DownArrow = styled.img`
   height: 40px;
   animation: animateDown infinite 1.5s;
   overflow-x: hidden;
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 2px #000);
 `;
 const Buttons = styled.div``;
 export default Section;
