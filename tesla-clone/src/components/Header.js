@@ -132,7 +132,8 @@ const BurgerNav = styled.div`
 const CustomClose = styled(CloseIcon)`
   cursor: pointer;
   border-radius: 50%;
-
+  transition: all 0.5s ease-in-out;
+  rotate: 0;
   &:hover {
     transition: all 0.5s ease-in-out;
     rotate: 180deg;
