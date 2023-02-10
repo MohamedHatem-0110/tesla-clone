@@ -4,7 +4,7 @@ import Section from "./Section";
 function Home() {
   return (
     <Container>
-      <div id="s">
+      <section id="s">
         <Section
           id="s"
           title="Model S"
@@ -13,8 +13,8 @@ function Home() {
           leftBtnText="Custom order"
           rightBtnText="Existing inventory"
         />
-      </div>
-      <div id="y">
+      </section>
+      <section id="y">
         <Section
           id="y"
           title="Model Y"
@@ -23,8 +23,8 @@ function Home() {
           leftBtnText="Custom order"
           rightBtnText="Existing inventory"
         />
-      </div>
-      <div id="3">
+      </section>
+      <section id="3">
         <Section
           id="3"
           title="Model 3"
@@ -33,8 +33,8 @@ function Home() {
           leftBtnText="Custom order"
           rightBtnText="Existing inventory"
         />
-      </div>
-      <div id="x">
+      </section>
+      <section id="x">
         <Section
           id="x"
           title="Model X"
@@ -43,8 +43,8 @@ function Home() {
           leftBtnText="Custom order"
           rightBtnText="Existing inventory"
         />
-      </div>
-      <div id="sp">
+      </section>
+      <section id="sp">
         <Section
           id="sp"
           title="Lowest Cost Solar Panes in America"
@@ -53,8 +53,8 @@ function Home() {
           leftBtnText="Order now"
           rightBtnText="Learn more"
         />
-      </div>
-      <div id="sr">
+      </section>
+      <section id="sr">
         <Section
           id="sr"
           title="Solar for New Roofs"
@@ -63,8 +63,8 @@ function Home() {
           leftBtnText="Order now"
           rightBtnText="Learn more"
         />
-      </div>
-      <div id="ac">
+      </section>
+      <section id="ac">
         <Section
           id="ac"
           title="Accessories"
@@ -72,13 +72,18 @@ function Home() {
           leftBtnText="Shop now"
           accessory
         />
-      </div>
+      </section>
     </Container>
   );
 }
 
 const Container = styled.div`
   height: 100vh;
+  /* scroll-snap-points-y: repeat(100vh); */
+  /* scroll-snap-type: y mandatory; */
+  .section {
+    scroll-snap-align: start;
+  }
 `;
 export default Home;
 export function handleClickScroll({ id }) {
